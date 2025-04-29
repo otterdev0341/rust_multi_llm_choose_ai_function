@@ -1,0 +1,13 @@
+/home/otterdev_ball/BaseDiskProject/rust_project/rust_multi_llm_choose_ai_function/rust_ai_function/target/debug/deps/libcalc-c1595a2a0caf6e02.rmeta: /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/lib.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/ast.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/mod.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/f64.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/i64.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/u64.rs /home/otterdev_ball/BaseDiskProject/rust_project/rust_multi_llm_choose_ai_function/rust_ai_function/target/debug/build/calc-8d02c2383ea36046/out/parser.rs
+
+/home/otterdev_ball/BaseDiskProject/rust_project/rust_multi_llm_choose_ai_function/rust_ai_function/target/debug/deps/calc-c1595a2a0caf6e02.d: /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/lib.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/ast.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/mod.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/f64.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/i64.rs /home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/u64.rs /home/otterdev_ball/BaseDiskProject/rust_project/rust_multi_llm_choose_ai_function/rust_ai_function/target/debug/build/calc-8d02c2383ea36046/out/parser.rs
+
+/home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/lib.rs:
+/home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/ast.rs:
+/home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/mod.rs:
+/home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/f64.rs:
+/home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/i64.rs:
+/home/otterdev_ball/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/calc-0.4.0/src/types/u64.rs:
+/home/otterdev_ball/BaseDiskProject/rust_project/rust_multi_llm_choose_ai_function/rust_ai_function/target/debug/build/calc-8d02c2383ea36046/out/parser.rs:
+
+# env-dep:OUT_DIR=/home/otterdev_ball/BaseDiskProject/rust_project/rust_multi_llm_choose_ai_function/rust_ai_function/target/debug/build/calc-8d02c2383ea36046/out
