@@ -1,7 +1,20 @@
+use std::error::Error;
+
 use dotenv::dotenv;
 use ollama_rs::{coordinator::Coordinator, generation::chat::ChatMessage, Ollama};
 use rust_ai_function::{configuration::ollama_config::OllamaConfig, llm_factory::llm::LlmVariant};
-use ollama_rs::{generation::tools::implementations::Calculator};
+use ollama_rs::generation::tools::implementations::Calculator;
+
+
+/// Get the weather for a given city
+/// 
+/// * city - City to get the weather for
+#[ollama_rs::function]
+async fn get_weather(city: String) -> Result<String, Box<dyn Error + Sync + Send>> {
+    let url = format!("https://wttr.in/{}?format=%C+%t", city);
+    let response = reqwest::get(&url).await?.text().await?;
+    Ok(response)
+}
 
 #[tokio::main]
 async fn main() {
@@ -9,7 +22,7 @@ async fn main() {
     let ollama_config = OllamaConfig::inject_env();
     let ollama = Ollama::new(ollama_config.host, ollama_config.port);
     let history = vec![];
-    let tools = ollama_rs::tool_group![Calculator {}];
+    let tools = ollama_rs::tool_group![get_weather];
 
     let mut cordinator = Coordinator::new_with_tools(
         ollama,
@@ -17,7 +30,7 @@ async fn main() {
         history,
         tools);
     
-    let user_message = "2+2*2-4";
+    let user_message = "what is the weather in london?";
 
     let ur_chat_message = ChatMessage::user(user_message.to_owned());
 
