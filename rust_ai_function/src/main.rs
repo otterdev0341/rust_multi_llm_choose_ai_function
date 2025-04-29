@@ -1,9 +1,9 @@
-use std::error::Error;
+
 
 use dotenv::dotenv;
-use ollama_rs::{coordinator::Coordinator, generation::chat::ChatMessage, Ollama};
+use ollama_rs::{coordinator::Coordinator, generation::{chat::ChatMessage, tools::implementations::Calculator}, Ollama};
 use rust_ai_function::{configuration::ollama_config::OllamaConfig, llm_factory::llm::LlmVariant};
-use ollama_rs::generation::tools::implementations::Calculator;
+
 
 
 /// Get the weather for a given city
@@ -16,13 +16,15 @@ async fn get_weather(city: String) -> Result<String, Box<dyn Error + Sync + Send
     Ok(response)
 }
 
+
+
 #[tokio::main]
 async fn main() {
     dotenv().ok();
     let ollama_config = OllamaConfig::inject_env();
     let ollama = Ollama::new(ollama_config.host, ollama_config.port);
     let history = vec![];
-    let tools = ollama_rs::tool_group![get_weather];
+    let tools = ollama_rs::tool_group![get_weather,Calculator {}];
 
     let mut cordinator = Coordinator::new_with_tools(
         ollama,
@@ -30,7 +32,7 @@ async fn main() {
         history,
         tools);
     
-    let user_message = "what is the weather in london?";
+    let user_message = "2+5+4";
 
     let ur_chat_message = ChatMessage::user(user_message.to_owned());
 

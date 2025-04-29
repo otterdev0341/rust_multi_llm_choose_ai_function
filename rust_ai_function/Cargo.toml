@@ -4,9 +4,13 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+async-trait = "0.1.88"
+dirs = "6.0.0"
 dotenv = "0.15.0"
+futures = "0.3.31"
 ollama-rs = {version = "0.2.4", features = ["tool-implementations", "macros", "ollama-rs-macros"]}
 reqwest = "0.12.15"
 schemars = {version = "0.8.22", features = ["preserve_order"]}
 serde = {version = "1.0.219", features = ["derive"]}
-tokio = {version = "1.44.2", features = ["full"]}
+tokio = {version = "1.44.2", features = ["full","fs","rt","macros"]}
+tokio-stream = "0.1.17"
